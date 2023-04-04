@@ -5,8 +5,7 @@ library(ggtext)
 
 # Data Wrangling ----------------------------------------------------------
 df <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-04-04/soccer21-22.csv")
-clubs <- read_csv(here::here("2023/2023_w14/clubs.csv")) # Dataset with club main color 
-
+clubs <- read_csv(here::here("2023/2023_w14/clubs.csv")) # Dataset with club main color https://raw.githubusercontent.com/AbdoulMa/TidyTuesday/main/2023/2023_w14/clubs.csv
 teams_off <- df |> 
   select(matches("Team"), FTHG, FTAG) |> 
   pivot_longer(
